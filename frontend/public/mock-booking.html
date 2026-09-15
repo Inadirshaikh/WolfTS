@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Mock Booking Page</title></head>
+  <body>
+    <h2>Mock Booking Form (Demo only)</h2>
+    <form id="booking">
+      Name: <input id="name"/><br/>
+      Age: <input id="age"/><br/>
+      Phone: <input id="phone"/><br/>
+      ID: <input id="id"/><br/>
+      Berth pref: <input id="berth"/><br/>
+      <button type="button" id="load">Load template</button>
+    </form>
+    <script>
+      document.getElementById('load').addEventListener('click', () => {
+        const t = localStorage.getItem('demo_booking_template');
+        if (!t) return alert('No template in localStorage. Save from main app first.');
+        const tpl = JSON.parse(t);
+        document.getElementById('name').value = tpl.passenger_name || '';
+        document.getElementById('age').value = tpl.age || '';
+        document.getElementById('phone').value = tpl.phone || '';
+        document.getElementById('id').value = tpl.id_number || '';
+        document.getElementById('berth').value = tpl.berth_pref || '';
+        alert('Fields filled from template. You must manually submit.');
+      });
+    </script>
+  </body>
+</html>

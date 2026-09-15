@@ -1,0 +1,8 @@
+body { font-family: Inter, Arial, sans-serif; margin:0; padding:0; }
+header { padding:16px; background:#0b2345; color:white; }
+.app main { display:flex; gap:16px; padding:16px; }
+.left, .center, .right { flex:1; min-width:260px; }
+.card { background:#fff; padding:12px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08); margin-bottom:12px; }
+.metric { display:inline-block; width:120px; text-align:center; margin-right:12px; }
+.metric .value { font-size:28px; font-weight:600; }
+button { margin-top:8px; }
