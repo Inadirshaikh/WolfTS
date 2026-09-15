@@ -1,0 +1,6 @@
+{
+  "latencyMsRange": [50, 300],
+  "failureRateBooking": 0.1,
+  "failureRateAvailability": 0.02,
+  "initialSeatsPerTrain": 20
+}
